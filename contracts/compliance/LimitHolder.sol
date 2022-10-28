@@ -265,6 +265,7 @@ contract LimitHolder is ICompliance, Ownable
     function created(address _to, uint256 _value) external override onlyToken {
         require(_value > 0, 'No token created');
         updateShareholders(_to);
+        
     }
 
     /**
